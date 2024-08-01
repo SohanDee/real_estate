@@ -13,12 +13,12 @@ mongoose.connect(process.env.MONGO).then(()=>{
 
 const App = express();
 
-App.listen(3001, ()=>{
+App.listen(3000, ()=>{
     console.log("App is running on port 3001")
 })
 
 App.use(express.json())
-App.use('/', routes)
+App.use('/api', routes)
 
 App.use((err, req, res, next)=>{
     const statusCode = err.statusCode || 500;

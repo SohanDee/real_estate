@@ -24,7 +24,7 @@ export default function Header() {
           ></input>
           <FaSearch className="text-slate-600" />
         </form>
-        <ul className="flex gap-4">
+        <ul className="flex gap-8 items-center">
           <Link to="/">
             {" "}
             <li className="hidden sm:inline text-slate-500 hover:text-green-700">
@@ -39,7 +39,7 @@ export default function Header() {
           </Link>
           <Link to="/profile">
               {currentUser ? (
-                <img className="rounded-full h-7 w-7 object-cover" src={currentUser.avatar} alt="Profile_image"/>
+                <img className="rounded-full h-10 w-10 object-cover" src={currentUser.avatar} alt="Profile_image"/>
               ): (<li className="text-slate-500 hover:text-green-700">Sign In</li>)}
           </Link>
         </ul>
